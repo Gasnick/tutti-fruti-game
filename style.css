@@ -1,61 +1,61 @@
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 20px;
-    background-color: #f7f7f7;
-  }
+  font-family: Arial, sans-serif; /* Define el tipo de letra para todo el sitio */
+  text-align: center; /* Centra todo el contenido del body horizontalmente */
+  margin: 20px; /* Agrega un margen exterior de 20px alrededor de todo el body */
+  background-color: #f7f7f7; /* Color de fondo claro para el body */
+}
 
-  .hidden {
-    display: none;
-  }
+.hidden {
+  display: none; /* Oculta los elementos asignados con esta clase */
+}
 
-  #players,
-  #game,
-  #score,
-  #winner {
-    margin-top: 20px;
-  }
+#players,
+#game,
+#score,
+#winner {
+  margin-top: 20px; /* Agrega un margen superior de 20px a estas secciones */
+}
 
-  input,
-  button {
-    margin: 5px;
-    padding: 10px;
-    font-size: 16px;
-  }
+input,
+button {
+  margin: 5px; /* Margen exterior de 5px alrededor de cada input y botón */
+  padding: 10px; /* Espaciado interno de 10px dentro de inputs y botones */
+  font-size: 16px; /* Tamaño de fuente de 16px */
+}
 
-  button {
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
+button {
+  background-color: #28a745; /* Color de fondo verde para los botones */
+  color: white; /* Texto de los botones en color blanco */
+  border: none; /* Elimina el borde por defecto del botón */
+  border-radius: 5px; /* Bordes redondeados de 5px */
+  cursor: pointer; /* Cambia el cursor a forma de "mano" al pasar sobre el botón */
+}
 
-  button:hover {
-    background-color: #218838;
-  }
+button:hover {
+  background-color: #218838; /* Cambia el color de fondo del botón cuando el mouse pasa por encima (hover) */
+}
 
-  table {
-    margin: 10px auto;
-    border-collapse: collapse;
-  }
+table {
+  margin: 10px auto; /* Margen de 10px y centra horizontalmente la tabla */
+  border-collapse: collapse; /* Elimina los espacios entre las celdas de la tabla */
+}
 
-  th,
-  td {
-    border: 1px solid #333;
-    padding: 5px 10px;
-  }
+th,
+td {
+  border: 1px solid #333; /* Agrega un borde de 1px color gris oscuro alrededor de cada celda */
+  padding: 5px 10px; /* Espaciado interno de 5px arriba/abajo y 10px izquierda/derecha */
+}
 
-  h2,
-  h3 {
-    color: #333;
-  }
+h2,
+h3 {
+  color: #333; /* Cambia el color del texto de los subtítulos a gris oscuro */
+}
 
-  #confetti {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-  }
+#confetti {
+  position: fixed; /* Fija el canvas en una posición estable sobre toda la pantalla */
+  top: 0; /* Posiciona el canvas en el borde superior de la ventana */
+  left: 0; /* Posiciona el canvas en el borde izquierdo de la ventana */
+  width: 100%; /* Hace que el canvas ocupe todo el ancho de la ventana */
+  height: 100%; /* Hace que el canvas ocupe todo el alto de la ventana */
+  pointer-events: none; /* Permite que los eventos del mouse pasen a través del canvas (para no bloquear clicks) */
+}

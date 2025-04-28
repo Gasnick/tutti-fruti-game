@@ -1,58 +1,59 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html> <!-- Indica que el documento es HTML5 -->
+<html lang="es"> <!-- Comienza el HTML, especificando idioma español -->
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Tutti Frutti Game</title>
+  <meta charset="UTF-8"> <!-- Define la codificación de caracteres (UTF-8) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace la página adaptable a móviles -->
+  <link rel="stylesheet" href="style.css"> <!-- Vincula el archivo de estilos CSS -->
+  <title>Tutti Frutti Game</title> <!-- Define el título que se verá en la pestaña del navegador -->
 </head>
 
-<body>
+<body> <!-- Comienza el contenido visible de la página -->
 
-  <h1>🌟 Tutti Frutti - Rondas 🌟</h1>
+  <h1>🌟 Tutti Frutti - Rondas 🌟</h1> <!-- Título principal de la página -->
 
-  <div id="setup">
-    <h2>Configuración del Juego</h2>
-    <input id="playerCount" type="number" placeholder="Cantidad de jugadores">
-    <input id="roundCount" type="number" placeholder="Cantidad de rondas">
-    <button onclick="startSetup()">Cargar jugadores</button>
+  <div id="setup"> <!-- Sección para configurar el juego -->
+    <h2>Configuración del Juego</h2> <!-- Subtítulo de la sección -->
+    <input id="playerCount" type="number" placeholder="Cantidad de jugadores"> <!-- Input para cantidad de jugadores -->
+    <input id="roundCount" type="number" placeholder="Cantidad de rondas"> <!-- Input para cantidad de rondas -->
+    <button onclick="startSetup()">Cargar jugadores</button> <!-- Botón que activa la carga de nombres -->
   </div>
 
-  <div id="players" class="hidden">
-    <h2>Ingrese los nombres:</h2>
-    <div id="playerNames"></div>
-    <button onclick="startGame()">Iniciar Juego</button>
+  <div id="players" class="hidden"> <!-- Sección oculta para ingresar nombres de jugadores -->
+    <h2>Ingrese los nombres:</h2> <!-- Subtítulo de la sección -->
+    <div id="playerNames"></div> <!-- Contenedor donde se crearán los inputs de nombres dinámicamente -->
+    <button onclick="startGame()">Iniciar Juego</button> <!-- Botón que inicia el juego -->
   </div>
 
-  <div id="game" class="hidden">
-    <h2>Ronda <span id="currentRound">1</span> de <span id="totalRounds">0</span></h2>
-    <h3>Tiempo: <span id="timer">0:00</span></h3>
-    <input id="minutesInput" type="number" placeholder="Minutos de ronda" min="1">
-    <br>
-    <button onclick="startTimer()">Iniciar Ronda</button>
-    <button onclick="stopTimer()">Parar Temporizador</button>
-    <button onclick="finishRound()">Fin de Ronda</button>
-    <button onclick="resetGame()">Reiniciar Juego</button>
-    <h3>Letra aleatoria: <span id="letter"></span></h3>
-    <button onclick="generateLetter()">Obtener letra</button>
-    <div id="usedLetters"></div>
+  <div id="game" class="hidden"> <!-- Sección del juego en progreso (también oculta inicialmente) -->
+    <h2>Ronda <span id="currentRound">1</span> de <span id="totalRounds">0</span></h2> <!-- Muestra la ronda actual y total -->
+    <h3>Tiempo: <span id="timer">0:00</span></h3> <!-- Muestra el temporizador de la ronda -->
+    <input id="minutesInput" type="number" placeholder="Minutos de ronda" min="1"> <!-- Input para definir minutos por ronda -->
+    <br> <!-- Salto de línea -->
+    <button onclick="startTimer()">Iniciar Ronda</button> <!-- Botón para iniciar el temporizador -->
+    <button onclick="stopTimer()">Parar Temporizador</button> <!-- Botón para detener el temporizador -->
+    <button onclick="finishRound()">Fin de Ronda</button> <!-- Botón para finalizar la ronda manualmente -->
+    <button onclick="resetGame()">Reiniciar Juego</button> <!-- Botón para reiniciar todo el juego -->
+    <h3>Letra aleatoria: <span id="letter"></span></h3> <!-- Muestra la letra aleatoria actual -->
+    <button onclick="generateLetter()">Obtener letra</button> <!-- Botón para generar una nueva letra -->
+    <div id="usedLetters"></div> <!-- Contenedor que mostrará las letras que ya salieron -->
   </div>
 
-  <div id="score" class="hidden">
-    <h2>Cargar puntajes</h2>
-    <div id="scoreInputs"></div>
-    <button onclick="saveScores()">Guardar puntajes</button>
+  <div id="score" class="hidden"> <!-- Sección para cargar los puntajes luego de cada ronda -->
+    <h2>Cargar puntajes</h2> <!-- Subtítulo -->
+    <div id="scoreInputs"></div> <!-- Contenedor donde aparecerán los inputs para ingresar puntajes -->
+    <button onclick="saveScores()">Guardar puntajes</button> <!-- Botón para guardar los puntajes cargados -->
   </div>
 
-  <div id="winner" class="hidden">
-    <h2>🎉 Ganador/a: <span id="winnerName"></span> 🎉</h2>
-    <h3>Puntajes finales:</h3>
-    <table id="finalScores"></table>
+  <div id="winner" class="hidden"> <!-- Sección para mostrar al ganador -->
+    <h2>🎉 Ganador/a: <span id="winnerName"></span> 🎉</h2> <!-- Texto que muestra el nombre del ganador -->
+    <h3>Puntajes finales:</h3> <!-- Subtítulo para los puntajes finales -->
+    <table id="finalScores"></table> <!-- Tabla donde se mostrarán los puntajes finales -->
   </div>
 
-  <canvas id="confetti"></canvas>
-  <script src="script.js"></script>
+  <canvas id="confetti"></canvas> <!-- Canvas para mostrar efectos de confeti cuando termina el juego -->
+
+  <script src="script.js"></script> <!-- Enlace al archivo JavaScript que maneja la lógica del juego -->
 </body>
 
-</html>
+</html> <!-- Cierre del documento HTML -->

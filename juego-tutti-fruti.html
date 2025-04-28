@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Tutti Frutti Game</title>
+</head>
+
+<body>
+
+  <h1>🌟 Tutti Frutti - Rondas 🌟</h1>
+
+  <div id="setup">
+    <h2>Configuración del Juego</h2>
+    <input id="playerCount" type="number" placeholder="Cantidad de jugadores">
+    <input id="roundCount" type="number" placeholder="Cantidad de rondas">
+    <button onclick="startSetup()">Cargar jugadores</button>
+  </div>
+
+  <div id="players" class="hidden">
+    <h2>Ingrese los nombres:</h2>
+    <div id="playerNames"></div>
+    <button onclick="startGame()">Iniciar Juego</button>
+  </div>
+
+  <div id="game" class="hidden">
+    <h2>Ronda <span id="currentRound">1</span> de <span id="totalRounds">0</span></h2>
+    <h3>Tiempo: <span id="timer">0:00</span></h3>
+    <input id="minutesInput" type="number" placeholder="Minutos de ronda" min="1">
+    <br>
+    <button onclick="startTimer()">Iniciar Ronda</button>
+    <button onclick="stopTimer()">Parar Temporizador</button>
+    <button onclick="finishRound()">Fin de Ronda</button>
+    <button onclick="resetGame()">Reiniciar Juego</button>
+    <h3>Letra aleatoria: <span id="letter"></span></h3>
+    <button onclick="generateLetter()">Obtener letra</button>
+    <div id="usedLetters"></div>
+  </div>
+
+  <div id="score" class="hidden">
+    <h2>Cargar puntajes</h2>
+    <div id="scoreInputs"></div>
+    <button onclick="saveScores()">Guardar puntajes</button>
+  </div>
+
+  <div id="winner" class="hidden">
+    <h2>🎉 Ganador/a: <span id="winnerName"></span> 🎉</h2>
+    <h3>Puntajes finales:</h3>
+    <table id="finalScores"></table>
+  </div>
+
+  <canvas id="confetti"></canvas>
+  <script src="script.js"></script>
+</body>
+
+</html>
